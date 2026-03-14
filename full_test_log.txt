@@ -1,0 +1,599 @@
+warning: unexpected `cfg` condition value: `no-entrypoint`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: `#[warn(unexpected_cfgs)]` on by default
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `cpi`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-heap`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `$crate::custom_heap_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `$crate::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the macro `$crate::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `$crate::custom_panic_default` crate for guidance on how handle this unexpected cfg
+  = help: the macro `$crate::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the macro `$crate::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unused import: `anchor_spl::token_2022::spl_token_2022::extension::transfer_hook::TransferHookAccount`
+ --> programs/transfer-hook/src/lib.rs:2:5
+  |
+2 | use anchor_s...nsferHookAccount;
+  |     ^^^^^^^^...^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `spl_transfer_hook_interface::instruction::ExecuteInstruction`
+ --> programs/transfer-hook/src/lib.rs:3:5
+  |
+3 | use spl_transfer_hook_interface::instruction::ExecuteInstruction;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-idl`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-log-ix-name`
+ --> programs/transfer-hook/src/lib.rs:7:1
+  |
+7 | #[program]
+  | ^^^^^^^^^^
+  |
+  = note: expected values for `feature` are: `idl-build`
+  = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+  = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/transfer-hook/src/lib.rs:42:10
+   |
+42 | #[derive(Accounts)]
+   |          ^^^^^^^^
+   |
+   = note: expected values for `feature` are: `idl-build`
+   = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+   = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/transfer-hook/src/lib.rs:60:10
+   |
+60 | #[derive(Accounts)]
+   |          ^^^^^^^^
+   |
+   = note: expected values for `feature` are: `idl-build`
+   = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+   = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unused variable: `mint`
+  --> programs/transfer-hook/src/lib.rs:15:13
+   |
+15 |         let mint = ctx.accounts.m...
+   |             ^^^^ help: if this is intentional, prefix it with an underscore: `_mint`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: `transfer-hook` (lib) generated 18 warnings (5 duplicates) (run `cargo fix --lib -p transfer-hook` to apply 2 suggestions)
+    Finished `release` profile [optimized] target(s) in 0.28s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running unittests src/lib.rs (/home/henrique/projetos/solana-stablecoin-standard/target/debug/deps/transfer_hook-534ac3419fd6df19)
+warning: unexpected `cfg` condition value: `no-entrypoint`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `cpi`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-heap`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `$crate::custom_heap_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `$crate::custom_heap_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the macro `$crate::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `$crate::custom_panic_default` crate for guidance on how handle this unexpected cfg
+   = help: the macro `$crate::custom_panic_default` may come from an old version of the `solana_program_entrypoint` crate, try updating your dependency with `cargo update -p solana_program_entrypoint`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the macro `$crate::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/initialize.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/mint.rs:9:10
+  |
+9 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/burn.rs:9:10
+  |
+9 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/freeze_account.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/thaw_account.rs:8:10
+  |
+8 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/pause.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/unpause.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/update_minter.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/transfer_authority.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/add_to_blacklist.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/sss-token/src/instructions/remove_from_blacklist.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+  = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+  = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+  = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/sss-token/src/instructions/seize.rs:10:10
+   |
+10 | #[derive(Accounts)]
+   |          ^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+   = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: ambiguous glob re-exports
+  --> programs/sss-token/src/instructions/mod.rs:14:9
+   |
+14 | pub use initialize::*;
+   |         ^^^^^^^^^^^^^ the name `handler` in the value namespace is first re-exported here
+...
+25 | pub use seize::*;
+   |         -------- but the name `handler` in the value namespace is also re-exported here
+   |
+   = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-idl`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a derive macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `Accounts` crate for guidance on how handle this unexpected cfg
+   = help: the derive macro `Accounts` may come from an old version of the `anchor_derive_accounts` crate, try updating your dependency with `cargo update -p anchor_derive_accounts`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `no-log-ix-name`
+  --> programs/sss-token/src/lib.rs:13:1
+   |
+13 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `default`, `idl-build`, and `init-if-needed`
+   = note: using a cfg inside a attribute macro will use the cfgs from the destination crate and not the ones from the defining crate
+   = help: try referring to `program` crate for guidance on how handle this unexpected cfg
+   = help: the attribute macro `program` may come from an old version of the `anchor_attribute_program` crate, try updating your dependency with `cargo update -p anchor_attribute_program`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `sss-token` (lib) generated 26 warnings (5 duplicates)
+    Finished `release` profile [optimized] target(s) in 0.19s
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
+     Running unittests src/lib.rs (/home/henrique/projetos/solana-stablecoin-standard/target/debug/deps/sss_token-0eec93eac0c4b0aa)
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/home/henrique/projetos/solana-stablecoin-standard/Anchor.toml"
+
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+(node:201849) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/henrique/projetos/solana-stablecoin-standard/tests/compliance.spec.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /home/henrique/projetos/solana-stablecoin-standard/tests/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+  Compliance (Blacklist & Seize)
+    1) "before all" hook for "Blocks unauthorized blacklisting"
+
+  RBAC & Quotas
+    2) "before all" hook for "Configures a minter with specific quota"
+
+  SSS-1 Preset E2E
+    3) Initializes token with SSS-1 preset
+    4) Configures a minter with quota
+    5) Mints tokens as minter with quota
+    6) Burns tokens
+    7) Pauses and Unpauses the token
+    8) Freezes and Thaws an account
+    9) Transfers Master Authority
+
+  SSS-2 Preset E2E
+    ✔ Initializes token with SSS-2 preset (506ms)
+    10) Blocks SSS-2 instructions on non-blacklisted account
+    11) Adds account to blacklist
+    ✔ Transfer hook blocks blacklisted transfers
+    12) Seizes tokens from blacklisted account
+    13) Removes address from blacklist
+
+
+  2 passing (3s)
+  13 failing
+
+  1) Compliance (Blacklist & Seize)
+       "before all" hook for "Blocks unauthorized blacklisting":
+     Simulation failed. 
+Message: Transaction simulation failed: Blockhash not found. 
+Logs: 
+[]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+  
+
+  2) RBAC & Quotas
+       "before all" hook for "Configures a minter with specific quota":
+     Simulation failed. 
+Message: Transaction simulation failed: Blockhash not found. 
+Logs: 
+[]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+  
+
+  3) SSS-1 Preset E2E
+       Initializes token with SSS-1 preset:
+     Simulation failed. 
+Message: Transaction simulation failed: Blockhash not found. 
+Logs: 
+[]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+  
+
+  4) SSS-1 Preset E2E
+       Configures a minter with quota:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at findStablecoinConfigPda (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:69:45)
+      at SolanaStablecoin.updateMinter (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1613:32)
+      at Context.<anonymous> (sss-1.spec.ts:39:15)
+      at processImmediate (node:internal/timers:485:21)
+
+  5) SSS-1 Preset E2E
+       Mints tokens as minter with quota:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at getAssociatedTokenAddressSync (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@solana+spl-token@0.4.14_@solana+web3.js@1.98.4_bufferutil@4.1.0_typescript@5.9.3__buff_231436dcfaa55390560bb7552227ddc8/node_modules/@solana/spl-token/src/state/mint.ts:200:55)
+      at /home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@solana+spl-token@0.4.14_@solana+web3.js@1.98.4_bufferutil@4.1.0_typescript@5.9.3__buff_231436dcfaa55390560bb7552227ddc8/node_modules/@solana/spl-token/src/actions/getOrCreateAssociatedTokenAccount.ts:41:58
+      at Generator.next (<anonymous>)
+      at /home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@solana+spl-token@0.4.14_@solana+web3.js@1.98.4_bufferutil@4.1.0_typescript@5.9.3__buff_231436dcfaa55390560bb7552227ddc8/node_modules/@solana/spl-token/lib/cjs/actions/getOrCreateAssociatedTokenAccount.js:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@solana+spl-token@0.4.14_@solana+web3.js@1.98.4_bufferutil@4.1.0_typescript@5.9.3__buff_231436dcfaa55390560bb7552227ddc8/node_modules/@solana/spl-token/lib/cjs/actions/getOrCreateAssociatedTokenAccount.js:4:12)
+      at getOrCreateAssociatedTokenAccount (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@solana+spl-token@0.4.14_@solana+web3.js@1.98.4_bufferutil@4.1.0_typescript@5.9.3__buff_231436dcfaa55390560bb7552227ddc8/node_modules/@solana/spl-token/lib/cjs/actions/getOrCreateAssociatedTokenAccount.js:35:12)
+      at Context.<anonymous> (sss-1.spec.ts:48:56)
+      at processImmediate (node:internal/timers:485:21)
+
+  6) SSS-1 Preset E2E
+       Burns tokens:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at findStablecoinConfigPda (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:69:45)
+      at SolanaStablecoin.burnTokens (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1559:32)
+      at Context.<anonymous> (sss-1.spec.ts:69:20)
+      at processImmediate (node:internal/timers:485:21)
+
+  7) SSS-1 Preset E2E
+       Pauses and Unpauses the token:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at findStablecoinConfigPda (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:69:45)
+      at SolanaStablecoin.pause (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1594:32)
+      at Context.<anonymous> (sss-1.spec.ts:76:15)
+      at processImmediate (node:internal/timers:485:21)
+
+  8) SSS-1 Preset E2E
+       Freezes and Thaws an account:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at findStablecoinConfigPda (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:69:45)
+      at SolanaStablecoin.freezeAccount (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1571:32)
+      at Context.<anonymous> (sss-1.spec.ts:94:15)
+      at processImmediate (node:internal/timers:485:21)
+
+  9) SSS-1 Preset E2E
+       Transfers Master Authority:
+     TypeError: Cannot read properties of undefined (reading 'toBuffer')
+      at findStablecoinConfigPda (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:69:45)
+      at SolanaStablecoin.transferAuthority (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1626:32)
+      at Context.<anonymous> (sss-1.spec.ts:104:15)
+      at processImmediate (node:internal/timers:485:21)
+
+  10) SSS-2 Preset E2E
+       Blocks SSS-2 instructions on non-blacklisted account:
+     Error: Account `mintAccount` not provided.
+      at /home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/common.ts:51:15
+      at Array.forEach (<anonymous>)
+      at validateAccounts (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/common.ts:46:14)
+      at ix (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/instruction.ts:44:23)
+      at txFn (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/transaction.ts:24:14)
+      at MethodsBuilder.rpc [as _rpcFn] (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/rpc.ts:21:18)
+      at MethodsBuilder.rpc (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/methods.ts:434:17)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at SolanaStablecoin.mintTokens (/home/henrique/projetos/solana-stablecoin-standard/packages/sdk/dist/index.js:1544:25)
+      at Context.<anonymous> (sss-2.spec.ts:57:5)
+
+  11) SSS-2 Preset E2E
+       Adds account to blacklist:
+     Simulation failed. 
+Message: Transaction simulation failed: Blockhash not found. 
+Logs: 
+[]. 
+Catch the `SendTransactionError` and call `getLogs()` on it for full details.
+  
+
+  12) SSS-2 Preset E2E
+       Seizes tokens from blacklisted account:
+     Error: Account `mintAccount` not provided.
+      at /home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/common.ts:51:15
+      at Array.forEach (<anonymous>)
+      at validateAccounts (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/common.ts:46:14)
+      at ix (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/instruction.ts:44:23)
+      at txFn (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/transaction.ts:24:14)
+      at MethodsBuilder.rpc [as _rpcFn] (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/rpc.ts:21:18)
+      at MethodsBuilder.rpc (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/methods.ts:434:17)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Context.<anonymous> (sss-2.spec.ts:106:5)
+
+  13) SSS-2 Preset E2E
+       Removes address from blacklist:
+     Error: AnchorError caused by account: blacklist_entry. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.
+      at Function.parse (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/error.ts:168:14)
+      at translateError (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/error.ts:277:35)
+      at MethodsBuilder.rpc [as _rpcFn] (/home/henrique/projetos/solana-stablecoin-standard/node_modules/.pnpm/@coral-xyz+anchor@0.32.1_bufferutil@4.1.0_typescript@5.9.3_utf-8-validate@6.0.6/node_modules/@coral-xyz/anchor/src/program/namespace/rpc.ts:35:29)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Context.<anonymous> (sss-2.spec.ts:116:5)
+
+
+

@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  api:
+    build: 
+      context: ./api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SOLANA_RPC_URL=http://host.docker.internal:8899
+      - KEYPAIR_PATH=/app/id.json
+    depends_on:
+      - redis
+
+  indexer:
+    build: 
+      context: ./indexer
+    environment:
+      - SOLANA_RPC_URL=http://host.docker.internal:8899
+      - REDIS_URL=redis://redis:6379
+      - WEBHOOK_URL=http://webhook:3002/dispatch
+    depends_on:
+      - redis
+      - webhook
+
+  webhook:
+    build: 
+      context: ./webhook
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
