@@ -15,7 +15,7 @@ export function registerStatusCommand(program: Command) {
       const spinner = ora("Fetching stablecoin status...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         // Status can be read without a real wallet, but we provide it for the SDK constructor
         const wallet = getWallet(globalOpts.wallet);
         const sdk = new SolanaStablecoin(connection, wallet);

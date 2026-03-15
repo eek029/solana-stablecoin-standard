@@ -3,7 +3,7 @@ import chalk from "chalk";
 import ora from "ora";
 import { SolanaStablecoin, SSS1_PRESET, SSS2_PRESET, InitializeParams } from "@stbr/sss-token";
 import { getConnection } from "../utils/connection.js";
-import { getWallet } from "../utils/wallet.js";
+import { getWallet, getKeypair } from "../utils/wallet.js";
 import { parseConfig } from "../utils/config.js";
 
 export function registerInitCommand(program: Command) {
@@ -14,17 +14,23 @@ export function registerInitCommand(program: Command) {
     .option("--name <val>", "Token name")
     .option("--symbol <val>", "Token symbol")
     .option("--decimals <val>", "Token decimals", parseInt)
+    .option("--mint <path>", "Path to keypair file for the mint (optional)")
     .option("--config <path>", "Path to TOML config file")
     .action(async (options, cmd) => {
       const globalOpts = cmd.optsWithGlobals();
       const spinner = ora("Connecting to Solana...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         const wallet = getWallet(globalOpts.wallet);
         const sdk = new SolanaStablecoin(connection, wallet);
         
         let params: InitializeParams;
+        let mintKeypair: any = undefined;
+
+        if (options.mint) {
+          mintKeypair = getKeypair(options.mint);
+        }
 
         if (options.config) {
           spinner.text = `Parsing config ${options.config}...`;
@@ -45,7 +51,7 @@ export function registerInitCommand(program: Command) {
 
         spinner.text = `Initializing Stablecoin "${params.name}" (${params.symbol}) on ${connection.rpcEndpoint}...`;
         
-        const { mint, config, txSignature } = await sdk.initialize(params);
+        const { mint, config, txSignature } = await sdk.initialize(params, mintKeypair);
         
         spinner.succeed(chalk.green(`Stablecoin initialized successfully!`));
         console.log(`\n${chalk.cyan("Mint Address:")} ${mint.toBase58()}`);

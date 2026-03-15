@@ -18,7 +18,7 @@ export function registerSupplyCommand(program: Command) {
       const spinner = ora("Fetching supply...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         const mintPubkey = new PublicKey(mintAddress);
         
         const mintInfo = await getMint(connection, mintPubkey, "confirmed", TOKEN_2022_PROGRAM_ID);

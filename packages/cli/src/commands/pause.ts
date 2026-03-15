@@ -15,7 +15,7 @@ export function registerPauseCommand(program: Command) {
       const spinner = ora("Pausing token activities...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         const wallet = getWallet(globalOpts.wallet);
         const sdk = new SolanaStablecoin(connection, wallet);
         

@@ -20,8 +20,9 @@ program
   .name("sss-token")
   .description(chalk.blue("Solana Stablecoin Standard CLI"))
   .version("0.1.0")
-  .option("-u, --url <rpc_url>", "RPC URL for the connection")
-  .option("-w, --wallet <path>", "Path to keypair file");
+  .option("-c, --cluster <cluster>", "Solana cluster (devnet, mainnet-beta, localnet)", "devnet")
+  .option("-r, --rpc <url>", "Custom RPC URL (overrides --cluster)")
+  .option("-w, --wallet <path>", "Path to keypair file for the authority");
 
 // Register commands
 registerInitCommand(program);

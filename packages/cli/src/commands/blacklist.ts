@@ -20,7 +20,7 @@ export function registerBlacklistCommand(program: Command) {
       const spinner = ora("Adding address to blacklist...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         const wallet = getWallet(globalOpts.wallet);
         const sdk = new SolanaStablecoin(connection, wallet);
         
@@ -42,7 +42,7 @@ export function registerBlacklistCommand(program: Command) {
       const spinner = ora("Removing address from blacklist...").start();
 
       try {
-        const connection = getConnection(globalOpts.url);
+        const connection = getConnection(globalOpts.rpc || globalOpts.cluster);
         const wallet = getWallet(globalOpts.wallet);
         const sdk = new SolanaStablecoin(connection, wallet);
         
