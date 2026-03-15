@@ -59,6 +59,24 @@ pub fn handler(ctx: Context<Seize>, amount: u64) -> Result<()> {
     ];
     let signer_seeds = &[&seeds[..]];
 
+    // SSS-2 accounts might be frozen (either by DefaultAccountState or manually).
+    // The PermanentDelegate authority is also the FreezeAuthority.
+    // We must ensure the account is thawed during the seizure.
+    let was_frozen = ctx.accounts.source.is_frozen();
+    if was_frozen {
+        let thaw_accounts = anchor_spl::token_2022::ThawAccount {
+            account: ctx.accounts.source.to_account_info(),
+            mint: ctx.accounts.mint_account.to_account_info(),
+            authority: ctx.accounts.stablecoin_config.to_account_info(),
+        };
+        let thaw_ctx = CpiContext::new_with_signer(
+            ctx.accounts.token_program.to_account_info(),
+            thaw_accounts,
+            signer_seeds,
+        );
+        anchor_spl::token_2022::thaw_account(thaw_ctx)?;
+    }
+
     let decimals = ctx.accounts.mint_account.decimals;
     let cpi_accounts = TransferChecked {
         from: ctx.accounts.source.to_account_info(),
@@ -74,6 +92,21 @@ pub fn handler(ctx: Context<Seize>, amount: u64) -> Result<()> {
     );
 
     token_2022::transfer_checked(cpi_ctx, amount, decimals)?;
+
+    // If it was frozen before, refreeze it (optional, but good for consistency)
+    if was_frozen {
+        let freeze_accounts = anchor_spl::token_2022::FreezeAccount {
+            account: ctx.accounts.source.to_account_info(),
+            mint: ctx.accounts.mint_account.to_account_info(),
+            authority: ctx.accounts.stablecoin_config.to_account_info(),
+        };
+        let freeze_ctx = CpiContext::new_with_signer(
+            ctx.accounts.token_program.to_account_info(),
+            freeze_accounts,
+            signer_seeds,
+        );
+        anchor_spl::token_2022::freeze_account(freeze_ctx)?;
+    }
 
     msg!("✓ Seized {} tokens from {} to treasury", 
         amount, 
